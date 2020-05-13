@@ -55,12 +55,36 @@ public class BallPanel extends JPanel
             gback.setColor(new Color(255,0,0));
             gback.fillRect(0,0,600,600);
             gback.setColor(new Color(0,255,0));        
-            gback.fillRect(0,10,100,40);
+            gback.fillRect(0,10,400,40);
+            gback.fillRect(400,10,40,80);
+            gback.fillRect(250,10,40,130);
+            gback.fillRect(310,90,160,40);
+            gback.fillRect(10,50,40,60);
             gback.fillRect(100,10,40,170);
             gback.fillRect(40,180,100,40);
-            gback.fillRect(40,120,40,180);
-            gback.fillRect(80,240,60,40);
-            gback.fillRect(40,300,360,40);
+            gback.fillRect(40,120,40,320);
+            gback.fillRect(20,240,130,40);
+            gback.fillRect(40,300,180,40);
+            gback.fillRect(260,300,200,40);
+            gback.fillRect(400,300,40,150);
+            gback.fillRect(400,380,90,40);
+            gback.fillRect(180,150,40,150);
+            gback.fillRect(160,150,100,40);
+            gback.fillRect(260,150,40,160);
+            gback.fillRect(10,450,490,40);
+            gback.fillRect(100,70,120,40);
+            gback.fillRect(40,400,300,40);
+            gback.fillRect(340,350,40,90);
+            gback.fillRect(130,350,210,40);
+            gback.fillRect(180,300,40,80);
+            gback.fillRect(30,180,120,40);
+            gback.fillRect(300,180,120,40);
+            gback.fillRect(420,140,40,120);
+            gback.fillRect(350,140,40,150);
+            gback.fillRect(310,250,40,40);
+            
+            gback.setColor(Color.YELLOW);
+            gback.fillRect(460,450,40,40);
         }
          g2.drawImage(back,null,0,0);
         
@@ -78,7 +102,14 @@ public class BallPanel extends JPanel
         // blah.bounce(this);
         // }
         Color k = new Color(back.getRGB((int)b.getCeX(), (int)b.getCeY()));
-        if(k.equals(Color.RED)) test = 0;
+        if(k.equals(Color.YELLOW)){
+            JOptionPane.showMessageDialog(null, "You win!");
+            
+        }
+        if(k.equals(Color.RED)) {
+            test = 0;
+            JOptionPane.showMessageDialog(null, "You lose");
+        }
         else  test = 1;
         
         try //delay loop

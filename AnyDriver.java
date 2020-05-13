@@ -8,7 +8,7 @@ public class AnyDriver
         JFrame frame1 = new JFrame();
         //DrawingPanel ball1 = new DrawingPanel(Color.RED);
         BallPanel ball1 = new BallPanel(Color.RED);
-        ball1.setPreferredSize(new Dimension(600,600));
+        ball1.setPreferredSize(new Dimension(500,500));
         frame1.add(ball1);
         frame1.pack();
         frame1.setVisible(true);
